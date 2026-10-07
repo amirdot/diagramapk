@@ -34,6 +34,20 @@ jobs:
         working-directory: project
         run: npm install
 
+      - name: Create Capacitor config
+        working-directory: project
+        run: |
+          cat > capacitor.config.json <<'EOF'
+          {
+            "appId": "com.amirdot.archdiagram",
+            "appName": "Arch Diagram",
+            "webDir": "www",
+            "android": {
+              "allowMixedContent": false
+            }
+          }
+          EOF
+
       - name: Create Android project
         working-directory: project
         run: |
