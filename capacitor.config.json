@@ -1,0 +1,8 @@
+{
+  "appId": "com.example.archdiagram37",
+  "appName": "arch-diagram-37",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}
