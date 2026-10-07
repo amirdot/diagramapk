@@ -34,6 +34,12 @@ jobs:
         working-directory: project
         run: npm install
 
+      - name: Create Android project
+        working-directory: project
+        run: |
+          npx cap add android
+          npx cap sync android
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
